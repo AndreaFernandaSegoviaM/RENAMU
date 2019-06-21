@@ -1,0 +1,38 @@
+#### INDICE DE DESARROLLO ECONOMICO
+```{r}
+
+```
+
+### EJECUCION DE DE PROGRAMAS Y PROYECTOS
+
+##Carga de la data
+
+#2017
+```{r}
+link="C100.sav"
+
+library(foreign)
+proyectos2017= read.spss(link, to.data.frame = T, use.value.labels = F)
+head(data)
+names(data) 
+```
+
+#2016
+```{r}
+link1="C1002016.sav"
+
+library(foreign)
+proyectos2016= read.spss(link1, to.data.frame = T, use.value.labels = F)
+```
+
+
+##Limpieza
+```{r}
+names(proyectos2017)
+names(proyectos2017)=c("Ubigeo","CodigoDepartamento","CodigoProvincia","CodigoDistrito","Departamento", "Provincia", "Distrito", "CategoriaMunicipalidad", "Municipalidad", "RealizoProgramas", "NombPrograma", "Costo", "EntidadConvenio", "Meses")
+proyectos2017=proyectos2017[-c(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 14)]
+proyectos2017
+```
+
+
+
